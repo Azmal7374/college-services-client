@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import logo from "../../../assets/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
@@ -31,7 +30,7 @@ const Footer = () => {
         <div className="lg:flex   p-8">
           <div className="">
             <div className="">
-              <img data-aos="fade-down" className=" mx-2" src={logo} alt="" />
+              <img data-aos="fade-down" className=" mx-2" src={0} alt="" />
             </div>
             <div className="w-72 mt-4">
               <p>
@@ -179,7 +178,7 @@ const Footer = () => {
         <div className="text-center md:flex justify-between mt-4">
           <div>
             <p className="text-white">
-              Copyright © 2023 Kids Toys. All rights reserved.
+              Copyright © 2023 CS&F. All rights reserved.
             </p>
           </div>
           <div className="text-white mt-4 md:mt-0 ">
