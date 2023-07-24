@@ -9,11 +9,12 @@ const Admission = () => {
             <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Govt. Syed Hatem Ali College</Link>
             </div>
             <div className="mt-5">
-            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Govt.  Womens College</Link>
+            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Barishal Government Women's College</Link>
             </div>
 
             <div className="mt-5">
-            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Govt.  Barishal College</Link>
+            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Government Barisal College
+            </Link>
             </div>
             <div className="mt-5">
             <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Model School & College</Link>
@@ -34,7 +35,7 @@ const Admission = () => {
             <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">City College</Link>
             </div>
             <div className="mt-5">
-            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Manik Mia Scholle& College</Link>
+            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Manik Mia Schoole& College</Link>
             </div>
             
         </div>
