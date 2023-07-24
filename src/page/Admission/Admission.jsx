@@ -26,16 +26,16 @@ const Admission = () => {
             </div>
 
             <div className="mt-5">
-            <Link to='information' className="text-2xl md:text-4xl text-[#0A6EBD]">Govt. Tularam College</Link>
+            <Link to='information' className="text-2xl md:text-4xl text-[#0A6EBD]">Government Tolaram College</Link>
             </div>
             <div className="mt-5">
-            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Alekanda College</Link>
+            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Government Science College</Link>
             </div>
             <div className="mt-5">
-            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">City College</Link>
+            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Tejgaon College</Link>
             </div>
             <div className="mt-5">
-            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Manik Mia Schoole& College</Link>
+            <Link to='/information' className="text-2xl md:text-4xl text-[#0A6EBD]">Govt. Alekanda College</Link>
             </div>
             
         </div>

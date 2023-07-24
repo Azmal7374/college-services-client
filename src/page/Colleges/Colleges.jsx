@@ -8,7 +8,7 @@ const Colleges = ( ) => {
 
   const [colleges, setColleges] =useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/allColleges')
+        fetch('https://college-services-server-rho.vercel.app/allColleges')
         .then(res => res.json())
         .then(data => {
             setColleges(data);
@@ -34,7 +34,11 @@ const Colleges = ( ) => {
        <div className="px-5 flex justify-center  flex-wrap gap-10  ">
       
        {
-        colleges.map(college => <CollegeCard key={college.serial} college={college}></CollegeCard>)
+        colleges.map(college => <>
+          <CollegeCard key={college.serial} college={college}></CollegeCard>
+      
+          
+          </>)
     }
 
 

@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faLocationDot, faPhone } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
-    <div className="mt-20 bg-[#F4D2B6]">
+    <div className="mt-20 bg-[#0d80a5]">
       <div className="pt-12 md:flex justify-center items-center  gap-10 text-center">
         <div className="flex gap-2 items-center ">
         <FontAwesomeIcon className="mt-2 fa-2xl ml-8" icon={faEnvelope} />
@@ -41,7 +41,7 @@ const Footer = () => {
           </div>
 
           <div>
-            <footer className="footer p-10 bg-[#F4D2B6] text-base-content">
+            <footer className="footer p-10  text-base-content">
               <div className="text-black">
                 <span className="font-bold text-2xl">My Account</span>
 
@@ -173,7 +173,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <footer className="px-10 py-4 bg-[#AB7E59]  ">
+      <footer className="px-10 py-4 bg-[#0787e9]  ">
         <hr />
         <div className="text-center md:flex justify-between mt-4">
           <div>

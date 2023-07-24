@@ -8,6 +8,11 @@ import Information from "../page/Information/Information";
 import Colleges from "../page/Colleges/Colleges";
 import PrivateRoute from "./PrivateRoute";
 import CollegeDetails from "../page/CollegeDetails/CollegeDetails";
+import Home from "../Componets/Home/Home";
+import MyCollege from "../page/MyCollege/MyCollege";
+import Review from "../page/Review/Review";
+import Profile from "../page/Profile/Profile";
+import UpdateForm from "../page/UodateForm/UpdateForm";
  
 
 
@@ -20,7 +25,7 @@ const router = createBrowserRouter([
         children:[
             {
                 path:'/',
-                element: <p>Hello</p>
+                element: <Home></Home>
             },
             
             {
@@ -46,8 +51,31 @@ const router = createBrowserRouter([
             {
                 path:'/college/:id',
                 element:<PrivateRoute><CollegeDetails></CollegeDetails></PrivateRoute>,
-                loader:({params}) => fetch(`http://localhost:5000/colleges/${params.id}`)
-            } 
+                loader:({params}) => fetch(`https://college-services-server-rho.vercel.app/colleges/${params.id}`)
+            } ,
+            {
+                path:'/myCollege',
+                element:<MyCollege></MyCollege>
+            },
+            {
+                path:'/review',
+                element:<Review></Review>
+            },
+        
+            {
+                path:'/singles/:name',
+                element: <CollegeDetails></CollegeDetails>,
+                loader:({params}) => fetch(`https://college-services-server-rho.vercel.app/singleCollege/${params.name}`)
+            } ,
+            {
+                path:'/profile',
+                element:<Profile></Profile>
+            },
+            {
+                path:'/updateForm',
+                element:<UpdateForm></UpdateForm>
+
+            }
            
         ]
     }

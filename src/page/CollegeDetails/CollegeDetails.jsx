@@ -3,7 +3,7 @@ import { useLoaderData } from "react-router-dom";
 const CollegeDetails = () => {
 
     const college = useLoaderData()
-    console.log(college)
+    // console.log(college)
 
     const {_id, serial,collegeName, ratting, research, admissionDate, image, history, event, sports} =college;
     return (

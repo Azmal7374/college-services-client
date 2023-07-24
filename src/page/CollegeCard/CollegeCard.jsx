@@ -2,7 +2,7 @@ import { Link  } from "react-router-dom";
 
 
 const CollegeCard = ({college}) => {
-    console.log(college)
+    // console.log(college)
     const {_id, serial,collegeName, ratting, research, admissionDate, image, history, event, sports} =college;
 
     

@@ -1,11 +1,16 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 import { NavLink } from "react-router-dom";
 
 import { AuthContext } from "../../../provider/AuthProvider";
-const Navbar = () => {
+import Data from "../../../utilies/common";
+const Navbar = ( ) => {
   const { user, logOut } = useContext(AuthContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+
+   
+  const [searchText, setSearchText] = useState("");
 
   const handleLogOut = () => {
     logOut()
@@ -14,6 +19,19 @@ const Navbar = () => {
         console.log(error.message);
       });
   };
+
+const [colleges, setColleges] = Data()
+   console.log(colleges)
+  const handleSearch = () => {
+    fetch(`https://college-services-server-rho.vercel.app/collegeSearchByName/${searchText}`)
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        setColleges(data);
+      });
+  };
+
+  
 
   return (
 
@@ -91,6 +109,19 @@ const Navbar = () => {
                   </NavLink>
                 </p>
               )}
+              {user && (
+                <p className="px-2 py-2">
+                  <NavLink
+                    to="/profile"
+                    className={({ isActive }) =>
+                      isActive ? "active" : "default"
+                    }
+                  >
+                Profile
+                  </NavLink>
+                </p>
+              )}
+               
                
               {!user?.email ? (
                 <>
@@ -111,13 +142,20 @@ const Navbar = () => {
                     {" "}
                     <button
                       onClick={logOut}
-                      className="text-[#0A6EBD] font-bold"
+                      className="text-[#102d44] font-bold"
                     >
                       Sign Out
                     </button>
                   </NavLink>
                 </p>
               )}
+
+              <input
+              onChange={(e) => setSearchText(e.target.value)}
+              type="text"
+              className="p-2 border border-[#0A6EBD]"
+            />{" "}
+            <button className='mt-2 bg-[#0A6EBD] hover:bg-[#0787e9] p-2 w-24 rounded-md text-white' onClick={handleSearch}>Search</button>
             </ul>
           </div>
         </div>
@@ -169,6 +207,19 @@ const Navbar = () => {
                 </p>
               )}
 
+              {user && (
+                <p className="mx-4 my-4">
+                  <NavLink
+                    to="/profile"
+                    className={({ isActive }) =>
+                      isActive ? "active" : "default"
+                    }
+                  >
+                Profile
+                  </NavLink>
+                </p>
+              )}
+
             {!user?.email ? (
               <>
                 <p className="mx-4  my-4">
@@ -199,16 +250,22 @@ const Navbar = () => {
                 </NavLink>
               </p>
             )}
-
-          
+            <p className="mx-1  my-1">
+            <input placeholder="college name"
+            onChange={(e) => setSearchText(e.target.value)}
+            type="text"
+            className="p-2  border border-[#0A6EBD]  " 
+          />{" "}
+          <button className='ml-2 mt-2 bg-[#0A6EBD] hover:bg-[#0787e9] p-2 w-24 rounded-md text-white' onClick={handleSearch}>Search</button>
+            </p>
+           
 
           </ul>
         </div>
 
-        <p className="mr-4">
+       
               
-        <input type="text" placeholder="College Name" className="input   input-[] w-40 md:w-64  " />
-        </p>
+       
 
         <div className="navbar-end mr-4 lg:mr-20" data-aos="fade-down">
           {user && (

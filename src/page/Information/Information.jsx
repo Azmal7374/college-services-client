@@ -40,7 +40,7 @@ const Information = () => {
             
           };
           console.log(newItem);
-          fetch('http://localhost:5000/information',{
+          fetch('https://college-services-server-rho.vercel.app/information',{
                 method:'POST',
                 headers:{
                   'Content-Type': 'application/json'
